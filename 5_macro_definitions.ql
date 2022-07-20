@@ -1,6 +1,5 @@
 import cpp
 
-from FunctionCall fc
-where
-	fc.getTarget().getName() = "memcpy"
-select fc, "a function call to memcpy"
+from Macro m
+where m.getName() in ["ntohl", "ntohll", "ntohs"]
+select m
